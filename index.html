@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT FORTOPOLIO</title>
+    <style>
+        /* Reset & General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            background-color: #222; /* Latar belakang body menjadi hitam */
+            line-height: 1.6;
+            
+        }
+
+        /* Hero Section with Video Background */
+        .hero-image {
+            position: relative;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+            margin-bottom: 60px;
+        }
+
+        .hero-image video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        /* Header Styling */
+        header {
+            background-color: rgba(34, 34, 34, 0.8);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 1px solid #444; /* Ganti dengan warna gelap */
+        }
+        header h1 {
+            font-size: 36px;
+        }
+
+        /* Profile Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: -50px auto 20px auto;
+            background-color: #121212; /* Latar belakang container menjadi lebih gelap */
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        /* Profile Info */
+        .profile-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+        .profile-info img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .profile-info div {
+            flex: 1;
+            max-width: 500px;
+            text-align: cover;
+        }
+        .profile-info h2 {
+            font-size: 28px;
+            color: #fff9f9;
+        }
+        .profile-info p {
+            color: #aaa;
+            font-size: 16px;
+        }
+
+        /* Button Styling */
+        .profile-info button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #aaa;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .profile-info button:hover {
+            background-color: #aaa;
+        }
+
+        /* Social Catalog */
+        .social-catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            background-color: #fff;
+        }
+        .social-catalog .card {
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba
+            (1, 1, 1, 1.2);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .social-catalog .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(1, 1, 1, 1.2);
+        }
+        .social-catalog .card h3 {
+            font-size: 22px;
+            margin-bottom: 1px;
+            color: #fff;
+        }
+        .social-catalog .card p {
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 1px;
+        }
+        .social-catalog .card a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        .social-catalog .card a:hover {
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #222;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-image {
+                height: 22vh;
+            }
+            .profile-info {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-info img {
+                margin-bottom: 20px;
+                width: 150px;
+                height: 150px;
+            }
+            .profile-info div {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 18px;
+            }
+            .profile-info h2 {
+                font-size: 24px;
+            }
+            .profile-info p {
+                font-size: 14px;
+            }
+            .social-catalog {
+                padding: 20px;
+            }
+            .social-catalog .card h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>GPT XYZ404</h1>
+</header>
+
+<!-- Hero Image with Video Background -->
+<div class="hero-image">
+    <video autoplay muted loop id="background-video">
+        <source src="https://files.catbox.moe/voxb8t.mp4" type="video/mp4">
+        Browser Anda tidak mendukung elemen video.
+    </video>
+</div>
+
+<!-- Profile Content -->
+<div class="container">
+    <div class="profile-info" style="display: flex; align-items: center;">
+        
+        <div style="text-align: left;">
+            <h2>GPT XYZ404</h2>
+            <p>Haii selamat datang diwebsite xyz404</p>
+            <p><strong>Email:</strong> unbannedrpioo@gmail.com</p>
+            <p><strong>Lokasi:</strong> Indonesia</p>
+            <p><strong>Status:</strong> Pelajar</p>
+            <p><button id="play-music">Play Music</button></p>
+            <p><button onclick="window.location.href='https://whatsapp.com/channel/0029VayBMaiGOj9u54Pzap1F'">Channelku</button></p>
+        </div>
+    </div>
+</div>
+
+<!-- Social Media Catalog -->
+<div class="social-catalog">
+    <div class="card">
+        <img src="https://files.catbox.moe/627ntz.jpg" alt="Instagram" style="width: 20%; border-radius: 10px;">
+        <h3>Instagram</h3>
+        <p>Jangan lupa follow ig ku.</p>
+        <a href="https://www.instagram.com/rapppppaa1" target="_blank">Lihat Profil</a>
+    </div>
+    <div class="card">
+        <img src="https://files.catbox.moe/fx4jfo.jpg" alt="Tiktok" style="width: 20%; border-radius: 10px;">
+        <h3>Tiktok</h3>
+        <p>Follow tiktok ku juga ygy.</p>
+        <a href="https://tiktok.com/@farr_258" target="_blank">Lihat Profil</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; GPT XYZ404</p>
+    <p>Semua Hak Dilindungi. | Support By ChatGPT</p>
+</footer>
+
+<!-- Musik (akan diputar setelah interaksi) -->
+<audio id="background-music" loop>
+    <source src="https://files.catbox.moe/tipw6f.mp3" type="audio/mp3">
+    Browser Anda tidak mendukung elemen audio.
+</audio>
+<script> 
+     document.getElementById("shop").addEventListener("click", function() {
+        const Shop = document.getElementById("catalog-shop");
+        music.play();
+    });
+</script>
+<script>
+    document.getElementById("play-music").addEventListener("click", function() {
+        const music = document.getElementById("background-music");
+        music.play();
+    });
+</script>
+</body>
+</html>
